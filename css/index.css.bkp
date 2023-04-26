@@ -1,0 +1,22 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #f3f3ef;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 500;
+    color: #0a313e;
+    // color: yellowgreen;
+}
+
+div#main {
+    margin: 1.6rem;
+    font-size: 1.4rem;
+}
+
+
+p {
+    // margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+}

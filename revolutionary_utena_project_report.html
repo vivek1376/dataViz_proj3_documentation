@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- , user-scalable=yes"> -->
+
+
+        <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">-->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" -->
+        <!--       rel="stylesheet"> -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+
+
+        <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">-->
+        <!--    <link rel="stylesheet" href="css/pico.min.css">-->
+
+        <!--    <link rel="stylesheet" href="css/index-matrixresurrec.css">-->
+        <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+        <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+        <!--    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"-->
+        <!--          rel="stylesheet">-->
+
+
+        <!--    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+        <!--    <title>Title</title>-->
+        <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">-->
+
+        <!--    <link rel="stylesheet" href="css/index-matrixresurrec.css">-->
+        <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+        <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+        <!--    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"-->
+        <!--          rel="stylesheet">-->
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
+                    <h1><em><strong>I'm a Graph Now Too</strong> documentation</em></h1>
+                    <p class="alignright">By Josh Zack, Rachel Lindquist, Nishidha Koneru, and Vivek Mehra</p>
+                    <h3>Motivation</h3>
+                    <p>Revolutionary Girl Utena, or rgu, is a series where everything is done with a purpose. If two characters are talking to each other, it’s important. If a phrase is repeated over and over again it’s important. As such, rgu, is a good candidate for this project as seeing repeating phrases or character interactions may help users more understand the series as a whole. As such, looking at repeated words, phrases and character interactions are helpful to understanding the series as a whole. Main characters also have colors associated with them, making design much easier as character colors can be used for visualizations and will be familiar to fans.</p>
+                    <h3>Data</h3>
+                    <p>Scripts pulled from: <a href="https://ohtori.nu/scripts/">https://ohtori.nu/scripts/</a></p>
+                    <p>Since it is a fan-run site, I didn’t want to make too many requests. As such I used 2 python files to pull the data. The first grabbed the data for each script so that it was stored on my computer and the second actually cleaned the data. This way I only needed to access the site 39 times, 1 for each episode, while I tried to figure out how to deal with cleaning the data.</p>
+                    <p>The python code used for pulling the data is here: <a href="https://github.com/RachelLindquist/DataVisProject3/blob/main/pythonWebscraping/scrape.py">https://github.com/RachelLindquist/DataVisProject3/blob/main/pythonWebscraping/scrape.py</a></p>
+                    <p>The python code for cleaning the data is here: <a href="https://github.com/RachelLindquist/DataVisProject3/blob/main/pythonWebscraping/uglyClean.py">https://github.com/RachelLindquist/DataVisProject3/blob/main/pythonWebscraping/uglyClean.py</a></p>
+                    <p>Due to formatting changes, episode 17 and episode 18 had to be done separately.</p>
+                    <p>The scripts are a translation of the original Japanese, as such there are some translation changes between characters' dialogue. The normalization of common phrases and fixing names, such as changing Micky to Miki, was done manually in Excel.</p>
+                    <p>Compare: <a href="https://ohtori.nu/scripts/Episode_07.htm">https://ohtori.nu/scripts/Episode_07.htm</a> to <a href="https://ohtori.nu/scripts/Episode_01.htm">https://ohtori.nu/scripts/Episode_01.htm</a> to see instances of character names changing in terms of romanization</p>
+                    <h3>Visualization components</h3>
+                    <ul>
+                        <li>1 section on the visualization components: Explain each view of the data, the GUI, etc.  Explain how you can interact with your application, and how the views update in response to these interactions. </li>
+                    </ul>
+                    <p>The first visualization component is a heat map that shows how much each character speaks throughout the show. The X axis displays all of the episodes and the Y axis displays all of the characters, and the shade of each block represents how much each character speaks in that episode: the darker the shade of the block, the more the character speaks in that episode. There is a tool tip that allows users to see the number of words spoken by each character in the episode when they hover over a specific block. Users can click on the characters’ names or the episodes to filter the data being displayed.</p>
+                    <p>The second visualization component displayed is a stacked bar chart that shows how many lines were spoken by each character in each arc of the show. The X axis displays all of the characters and the Y axis displays the number of lines spoken, and the colors represent each arc of the show. If you click any of the colored bars, all of the visualization components adjust to display data for the selected arc.</p>
+                    <p>The third visualization component is a multi line chart that displays the words spoken by each character. The X axis displays all the episodes and the Y axis displays the total number of words, and the color of each line represents each character. The line chart adjusts according to the data selected in the stacked bar chart. The search bar allows users to enter specific words and see which character says them and how many times.</p>
+                    <p>The next visualization components are the two word clouds. The word cloud on the left showcases the most spoken words in the series. These are sized by how often the word is spoken and colored by who speaks the word the most. There is a minimum size so that words continue to be readable even after filtering. The word cloud on the right is similar but focuses on full character lines, looking for the most repeating lines. These tend to be short lines like “Yes.” or important repeated phrases like “For the sake of revolutionizing the world!”</p>
+                    <p>The final visualization component is an arc diagram that showcases character interactions. Using the character colors, a line connects between characters that have lines in the same scene together. Hovering over a character’s circle in the arc diagram highlights that character and their interactions, making it easier to look at a single character.</p>
+                    <h3>Design Sketches</h3>
+                    <ul>
+                        <li>
+                            Include design sketches and design justifications
+                        </li>
+                        <li>
+                            <img alt="" src="imgs/img1.png" class="makesmaller" />
+                        </li>
+                        <li>
+                            <img alt="" src="imgs/img2.png" class="makesmaller" />
+                        </li>
+                        <li>
+                            Heatmap
+                            <ul>
+                                <li>
+                                    Shows lines by character for each ep, the main idea being to show in depth how much each character is in each ep
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Stacked bar chart
+                            <ul>
+                                <li>
+                                    Compares each person to one another for their lines Across arcs. While this can be done in the heatmap it is much easier to visualize with this
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Line chart
+                            <ul>
+                                <li>
+                                    Has a search feature which allows you to type in a phrase and then it’ll show how often its said by each character
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Arc graph
+                            <ul>
+                                <li>
+                                    Shows what characters tend to be in the same scenes together
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Word clouds
+                            <ul>
+                                <li>
+                                    Left
+                                    <ul>
+                                        <li>
+                                            Showcases common words, with color based on who speaks it the most. Size also corresponds to how often the word is mentioned.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Right
+                                    <ul>
+                                        <li>
+                                            Similar to the left word cloud, except showcasing common phrases said throughout the series.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Discoveries:</h3>
+                    <p><img alt="" src="imgs/img3.png" /></p>
+                    <p>Anthy, purple, is a main character, however she doesn’t speak much, often showing up in scenes but staying quiet. However, if we look at the word cloud, she has 1 word she says more than any of the other characters, is Utena, the name of her girlfriend. Meanwhile, Touga, red, as the character meant to represent misogyny in the series, is the one to most refer to Anthy as the “rose bride” and it is therefore not surprising that he says “bride” the most in the series.</p>
+                    <p><img alt="" src="imgs/img4.png" /></p>
+                    <p>The shadows are not real characters, implied to be narrators and often understood as a version of the Greek chorus. They show up on a backdrop as shadows and discuss what has happened in the episode, though in a vague and joking manner. Rarely do they ever interact with characters. Using the arc diagram, however, it is possible to see who they decide to interact with, leaving it up to the user to determine why. Perhaps they talk with Utena because she’s the main character and Akio because he’s the main villain. Maybe they are simply ghosts or failed duelists, and their ability to talk with Ruka and Mikage, who are both dead, is showcasing that.</p>
+                    <p><img alt="" src="imgs/img5.png" /></p>
+                    <p>Finally our code allows us to look at character relationships. Juri has an unrequited crush on Shiori who has yet to realize she is a lesbian. Shirori, to avoid her feelings and act like she’s straight, has decided to ignore Juri and focus on Ruka, their childhood friend. However, in Juri’s introductory episode, 7, it is easy to check that Ruka doesn’t appear at all even while Shiori does, showcasing that Ruka isn’t as important as Shiori later makes him out to be in episodes 28 and 29.</p>
+                    <h3>Process</h3>
+                    <h4>Code structure</h4>
+                    <p>The project code was structured in a tree-like structure with the core html code index.html living in the root path and individual folders as follows:</p>
+                    <ul>
+                        <li>
+                            css/ for css style definitions
+                        </li>
+                        <li>
+                            js/ for all javascript files
+                        </li>
+                        <li>
+                            data/ for the raw input data file (in csv format)
+                        </li>
+                    </ul>
+                    js/ folder further stores the main javascript file main.js and also individual js files responsible for each individual visualization as follow:
+                    <ul>
+                        <li>
+                            arc.js for the arc graph
+                        </li>
+                        <li>
+                            barchart.js for the stacked bar chart
+                        </li>
+                        <li>
+                            heatmap.js for the heatmap chart
+                        </li>
+                        <li>
+                            linechart.js for the line chart
+                        </li>
+                        <li>
+                            wordCloud.js for the word cloud
+                        </li>
+                    </ul>
+                    <p>The bulleted files above create classes for each visualization, and the classes are instantiated in main.js before passing the filtered data to the instantiated objects to visualize.</p>
+                    <h4>Libraries used</h4>
+                    <ul>
+                        <li>
+                            D3 - <a href="https://d3js.org/">https://d3js.org/</a> 
+                        </li>
+                        <li>
+                            D3-cloud - <a href="https://github.com/jasondavies/d3-cloud">https://github.com/jasondavies/d3-cloud</a>
+                        </li>
+                        <li>
+                            Spectre css - <a href="https://picturepan2.github.io/spectre/">https://picturepan2.github.io/spectre/</a>
+                        </li>
+                    </ul>
+                    <p>All of the visualizations use the d3 library. Additionally, the arc graph also uses the d3-cloud library. Spectre css library has been used for layout and styling of the page.</p>
+                    <h4>Development and testing process</h4>
+                    <p>The data processing was performed separately as explained in the Data section. The cleaned raw data file was placed in the data/ folder. The individual visualizations were coded and tested separately by different team members as listed in the Division of labor section. A github repo was created to manage the project development, which all members had write access to. In order to run the code, one only needs to check out the repo code and run an appropriate web server. Since this is not a demanding web application, typically, the python webserver was used, it can be invoked from the root directory using the command line:</p>
+                    <p>python3 -m http.server <optional_port_num, defaults to 8000></p>
+                    <p>Once the web server goes live. the application can be accessed using the url localhost:<port_num> in a web browser.</p>
+                    <p>After coding the individual visualizations, they were arranged in a grid based layout using spectre css library (which internally uses flexbox grid based techniques).</p>
+                    <p>Interactive filtering feature was added to the heatmap and the stacked bar chart as described in the Visualization components section. Filtering can be done either individually on either chart or can be done in combination where data filtered by the heatmap filter action is further filtered by the bar chart filter action. Also, all visualizations are updated to show the final filtered data. Filtering code was added to main.js, where any filter action on either heatmap or barchart filters out the source dataset and then the filtered dataset is fed to all visualizations objects before calling updateVis() method to update the rendering.</p>
+                    <p>The project code and the live application can be accessed through the following url's: </p>
+                    <ul>
+                        <li>
+                            Link to code: <a href="https://github.com/RachelLindquist/DataVisProject3">https://github.com/RachelLindquist/DataVisProject3</a>
+                        </li>
+                        <li>
+                            Link to live application: <a href="https://rachellindquist.github.io/DataVisProject3/">https://rachellindquist.github.io/DataVisProject3/</a>
+                        </li>
+                    </ul>
+                    <h3>Demo</h3>
+                    <p><a href="https://mailuc-my.sharepoint.com/:v:/g/personal/lindqurm_mail_uc_edu/EZ2UnxCWlQlBuEl-BCTf6hkBuWeE7UExpReO9O3-ZCqMPg?e=1LbBkO">https://mailuc-my.sharepoint.com/:v:/g/personal/lindqurm_mail_uc_edu/EZ2UnxCWlQlBuEl-BCTf6hkBuWeE7UExpReO9O3-ZCqMPg?e=1LbBkO</a></p>
+                    <h3>Division of Labor</h3>
+                    <ul>
+                        <li>
+                            Document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components.
+                        </li>
+                        <li>
+                            Josh - Bar chart, filtering, bug fixes
+                        </li>
+                        <li>
+                            Rachel - Data collection/cleanup, word cloud, arc graph, line chart searching, bug fixes
+                        </li>
+                        <li>
+                            Nishi - Line chart
+                        </li>
+                        <li>
+                            Vivek - Heatmap, CSS, bug fixes
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

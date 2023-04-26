@@ -1,0 +1,54 @@
+html {
+    background-color: #f3f3ef;
+    /*font-family: 'Playfair Display', serif;*/
+    /*font-weight: 500;*/
+    /*color: #0a313e;*/
+}
+
+body {
+    /*font-family: 'Playfair Display', serif;*/
+    /*font-weight: 500;*/
+    /*color: #0a313e;*/
+    // color: yellowgreen;
+}
+
+div.container {
+    font-size: 1.8rem;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 500;
+    color: #0a313e;
+}
+
+img{
+    /* width:auto; */
+    /* height:auto; */
+    /* max-width:100%; */
+    max-width: 75%;
+}
+
+img.makesmaller {
+    max-width:66%;
+}
+
+h1 {
+    padding-top: 4.0rem;
+    // padding-bottom: 1.0rem;
+    /* font-size: 4.0rem; */
+    // margin-top: 5.0rem;
+    // margin-bottom: 8.0rem;
+    // font-family: 'Playfair Display', serif;
+}
+
+p.author {
+    font-size: 1.5rem;
+    color: #72878d;
+}
+blockquote {
+    font-style: italic;
+    // font-size: 2.0rem;
+}
+
+p {
+    // margin-top: 1.0rem;
+    // margin-bottom: 1.0rem;
+}
